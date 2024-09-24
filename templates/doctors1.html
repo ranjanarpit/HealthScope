@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Doctor, Healthcare, Dr. K.K. Khandelwal">
+    <meta name="description" content="Profile of Dr. K.K. Khandelwal, a specialist in cardiology.">
+    <title>Dr. K.K. Khandelwal - Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .doctor-profile {
+            width: 100%;
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .doctor-profile h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1A76D1;
+            margin-bottom: 20px;
+        }
+
+        .doctor-details {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .doctor-image img {
+            width: 300px; /* Adjust size as needed */
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .doctor-info {
+            text-align: left;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+
+        .doctor-info h2, .doctor-info h3 {
+            font-size: 1.2em;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .doctor-info p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .doctor-info ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .doctor-info ul li {
+            margin-bottom: 10px;
+        }
+
+        .doctor-info p a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .doctor-info p a:hover {
+            text-decoration: underline;
+        }
+
+        .doctor-info i {
+            margin-right: 10px;
+            color: #0073e6;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="doctor-profile">
+        <h1>Dr. K.K. Khandelwal</h1>
+        <div class="doctor-details">
+            <div class="doctor-image">
+                <img src="{{ url_for('static', filename='img/DOCTORS1.jpeg') }}" alt="Dr. K.K. Khandelwal">
+            </div>
+            <div class="doctor-info">
+                <h2>Specialization: Cardiology</h2>
+                <p>Dr. K.K. Khandelwal is a renowned cardiologist with over 20 years of experience in diagnosing and treating heart conditions. He is well-versed in managing complex cardiovascular diseases and has a keen interest in preventive cardiology. Dr. Khandelwal has contributed to numerous research papers and is a member of various national and international cardiology associations.</p>
+                <h3>Education</h3>
+                <ul>
+                    <li>MBBS from All India Institute of Medical Sciences (AIIMS), New Delhi</li>
+                    <li>MD in Internal Medicine from AIIMS, New Delhi</li>
+                    <li>DM in Cardiology from AIIMS, New Delhi</li>
+                </ul>
+                <h3>Experience</h3>
+                <ul>
+                    <li>Senior Consultant, Cardiology, Apollo Hospitals, New Delhi</li>
+                    <li>Associate Professor of Cardiology, AIIMS, New Delhi</li>
+                    <li>Visiting Faculty, American College of Cardiology</li>
+                </ul>
+                <h3>Awards & Recognitions</h3>
+                <ul>
+                    <li>Padma Shri Award, 2015</li>
+                    <li>Best Cardiologist Award by Indian Medical Association, 2018</li>
+                    <li>Excellence in Cardiology by HealthCare India, 2021</li>
+                </ul>
+                <h3>Contact Information</h3>
+                <p><i class="fa fa-envelope"></i> <a href="mailto:dr.khandelwal@hospital.com">dr.khandelwal@hospital.com</a></p>
+                <p><i class="fa fa-phone"></i> +91 98765 43210</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+
+    <!-- Include FontAwesome for icons -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

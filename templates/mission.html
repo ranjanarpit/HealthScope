@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Health, Risk Prediction, Preventive Healthcare">
+    <meta name="description" content="Mission and objectives of the Health Risk Prediction System.">
+    <title>Health Risk Prediction System - Mission</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .mission-section {
+            width: 100%;
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .mission-section h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1A76D1;
+            margin-bottom: 20px;
+        }
+
+        .mission-content {
+            text-align: left;
+            padding: 0 20px;
+            color: #555;
+        }
+
+        .mission-content h2 {
+            font-size: 1.5em;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .mission-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .mission-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .mission-content ul li {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="mission-section">
+        <h1>Our Mission</h1>
+        <div class="mission-content">
+            <p>Our mission is to empower individuals with the knowledge and tools necessary to take charge of their health through innovative, data-driven technologies. We believe that access to personalized health information can significantly reduce the incidence of preventable diseases, improve quality of life, and promote a healthier society overall.</p>
+            
+            <h2>Key Objectives of Our Mission</h2>
+            <ul>
+                <li><strong>Accessibility:</strong> Making cutting-edge health prediction tools available to everyone, regardless of their technical background or medical knowledge.</li>
+                <li><strong>Accuracy:</strong> Ensuring that our health predictions are highly accurate by continuously refining our machine learning models with new data and the latest research in medical science.</li>
+                <li><strong>Privacy and Security:</strong> Maintaining the highest standards of data privacy and security to protect user information and build trust.</li>
+                <li><strong>Proactive Health Management:</strong> Encouraging users to take a proactive approach to their health by providing actionable insights and recommendations based on personalized risk assessments.</li>
+                <li><strong>Education and Awareness:</strong> Raising awareness about the importance of preventive healthcare and educating users on how to maintain a healthy lifestyle through our personalized recommendations.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Health Risk Prediction System. All Rights Reserved.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

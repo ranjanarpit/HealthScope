@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Health, Preventive Healthcare, Health Vision, Global Health">
+    <meta name="description" content="Vision and long-term goals of the Health Risk Prediction System.">
+    <title>Health Risk Prediction System - Vision</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .vision-section {
+            width: 100%;
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .vision-section h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1A76D1;
+            margin-bottom: 20px;
+        }
+
+        .vision-content {
+            text-align: left;
+            padding: 0 20px;
+            color: #555;
+        }
+
+        .vision-content h2 {
+            font-size: 1.5em;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .vision-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .vision-content ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .vision-content ul li {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="vision-section">
+        <h1>Our Vision</h1>
+        <div class="vision-content">
+            <p>Our vision is to pioneer the future of preventive healthcare by creating a world where every individual has the knowledge and tools to predict, prevent, and manage potential health risks before they develop into serious conditions. We aspire to be at the forefront of healthcare innovation, harnessing the power of technology to enhance human well-being on a global scale.</p>
+            
+            <h2>In the Long Term, We Envision:</h2>
+            <ul>
+                <li><strong>A Healthier Society:</strong> By equipping people with the ability to foresee health risks, we aim to contribute to a reduction in the prevalence of chronic diseases, leading to a healthier and more productive global population.</li>
+                <li><strong>Continuous Innovation:</strong> We strive to continually enhance our platform by integrating the latest advancements in machine learning, data science, and medical research, ensuring that our users always have access to the most accurate and up-to-date health information.</li>
+                <li><strong>Global Reach:</strong> We aim to expand our platform’s accessibility to users across the world, breaking down barriers to preventive healthcare and providing valuable insights to individuals in all regions, regardless of their access to traditional healthcare services.</li>
+                <li><strong>Holistic Health Management:</strong> Our vision includes developing a comprehensive health management system that not only predicts risks but also offers integrated solutions for diet, exercise, mental health, and overall well-being, creating a one-stop platform for holistic health.</li>
+                <li><strong>Collaboration with Healthcare Providers:</strong> We foresee a future where our platform seamlessly integrates with healthcare providers, allowing for a collaborative approach to health management, where both patients and professionals can work together to achieve optimal health outcomes.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

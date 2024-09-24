@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Health, Risk Prediction, Healthcare, Machine Learning, TensorFlow, Keras">
+    <meta name="description" content="Health Risk Prediction System for predicting health risks based on user-provided data.">
+    <title>Health Risk Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .system-profile {
+            width: 100%;
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .system-profile h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1a76d1;
+            margin-bottom: 20px;
+        }
+
+        .system-details {
+            text-align: center;
+        }
+
+        .system-info {
+            text-align: left;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+
+        .system-info h2, .system-info h3 {
+            font-size: 1.5em;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .system-info p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .system-info ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .system-info ul li {
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="system-profile">
+        <h1>Health Risk Prediction System</h1>
+        <div class="system-details">
+            <div class="system-info">
+                <h2>Overview</h2>
+                <p>This Health Risk Prediction System is an advanced web application designed to revolutionize how individuals manage their health. It leverages machine learning and data analysis to predict potential health risks based on user-provided medical data and health metrics.</p>
+                <h2>Functionality</h2>
+                <ul>
+                    <li>Users can input personal health data such as age, weight, blood pressure, cholesterol levels, and medical history.</li>
+                    <li>The system processes this data using machine learning models to predict the likelihood of health conditions like diabetes, heart disease, and hypertension.</li>
+                    <li>Users receive personalized health recommendations based on their individual risk profiles, helping them take proactive steps towards better health.</li>
+                </ul>
+                <h2>Technology Stack</h2>
+                <ul>
+                    <li><strong>Front-End:</strong> HTML, CSS, JavaScript, React</li>
+                    <li><strong>Back-End:</strong> Node.js, Python, Flask</li>
+                    <li><strong>Machine Learning:</strong> Support Vector, Logistic Regression</li>
+                </ul>
+                <h2>Security & Privacy</h2>
+                <p>The system includes features like user authentication, profile management, and secure data handling to ensure user privacy at all times.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+
+</body>
+
+</html>

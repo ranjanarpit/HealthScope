@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Disease Prediction, Health, AI, Machine Learning">
+    <meta name="description" content="A web application for predicting multiple diseases using user inputs and advanced machine learning algorithms.">
+    <meta name="copyright" content="2024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Multiple Disease Prediction</title>
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader-outter"></div>
+            <div class="loader-inner"></div>
+            <div class="indicator"> 
+                <svg width="16px" height="12px" aria-label="Loading Indicator">
+                    <polyline id="back" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                    <polyline id="front" points="1 6 4 6 6 11 10 1 12 6 15 6"></polyline>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 70701 82456</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">support@healthscope.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header> 
+    <div id="carouselExampleIndicators" class="owl-carousel owl-theme">
+        <div class="item">
+            <img src="{{ url_for('static', filename='img/slider1.png') }}" alt="Slide 1">
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static', filename='img/slider2.png') }}" alt="Slide 2">
+        </div>
+        <div class="item">
+            <img src="{{ url_for('static', filename='img/slider3.png') }}" alt="Slide 3">
+        </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- Custom Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            $("#carouselExampleIndicators").owlCarousel({
+                items: 1,
+                loop: true,
+                margin: 10,
+                autoplay: true,
+                autoplayTimeout: 4000,
+                autoplayHoverPause: true,
+                nav: false,  
+                dots: false
+            });
+        });
+    </script>
+    
+    
+    <div class="feature-row">
+        <!-- Container 1 -->
+        <div class="feature-container">
+            <span class="feature-text">Click For</span>
+            <h4 class="feature-title">Diabetes Prediction</h4>
+            <p class="feature-description">Uncover Your Diabetes Risk-Take Control of Your Health Today</p>
+            <a href="{{ url_for('diabetes') }}" class="feature-button">Provide Your Data</a>
+        </div>
+        <!-- Container 2 -->
+        <div class="feature-container">
+            <span class="feature-text">Click For</span>
+            <h4 class="feature-title">Heart Disease Prediction</h4>
+            <p class="feature-description">Assess Your Heart Disease Risk-Start Your Journey to Better Health</p>
+            <a href="{{ url_for('heart') }}" class="feature-button">Provide Your Data</a>
+        </div>
+    </div>
+
+    <div class="portfolio-section">
+        <h5 class="portfolio-title">Your health is your greatest wealth, Nurture it with wise choices.</h5>
+        <p class="portfolio-description">For in the seeds of daily habits lie the roots of a life free from disease.</p>
+        
+        <div class="portfolio-container">
+            <div class="portfolio-item">
+                <a href="{{ url_for('portfolio1') }}">
+                    <img src="{{ url_for('static', filename='img/portfolio1.jpeg') }}" alt="portfolio1">
+                    <!-- <span class="portfolio-text">Cancer Prediction</span> -->
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="{{ url_for('portfolio2') }}">
+                    <img src="{{ url_for('static', filename='img/portfolio2.jpeg') }}" alt="portfolio2">
+                    <!-- <span class="portfolio-text">Kidney Disease Prediction</span> -->
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="{{ url_for('portfolio3') }}">
+                    <img src="{{ url_for('static', filename='img/portfolio3.jpeg') }}" alt="portfolio3">
+                    <!-- <span class="portfolio-text">Liver Disease Prediction</span> -->
+                </a>
+            </div>
+            <div class="portfolio-item">
+                <a href="{{ url_for('portfolio4') }}">
+                    <img src="{{ url_for('static', filename='img/portfolio4.jpeg') }}" alt="portfolio4">
+                    <!-- <span class="portfolio-text">Stroke Prediction</span> -->
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="call-to-action">
+        <div class="cta-content">
+            <h2>Do you need Emergency Medical Care?</h2>
+            <h3>Call Now @ 108</h3>
+            <div class="cta-buttons">
+                <a href="#" class="cta-btn primary-btn">Contact Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="appointment" class="appointment-section">
+        <div class="container">
+            <div class="appointment-content">
+                <div class="appointment-form">
+                    <h3>Book an Appointment</h3>
+                    <p>Please fill out the form below to schedule an appointment with us.</p>
+                    <form id="appointment-form">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact Number:</label>
+                                <input type="tel" id="contact" name="contact" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="department">Department:</label>
+                                <select id="department" name="department" required>
+                                    <option value="">Select Department</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="neurology">Diabetes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="doctor">Doctor:</label>
+                                <select id="doctor" name="doctor" required>
+                                    <option value="">Select Doctor</option>
+                                    <option value="dr-smith">Dr. K.K. Khandelwal</option>
+                                    <option value="dr-johnson">Dr. S.K. Sinha</option>
+                                    <option value="dr-lee">Dr. Singh</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="date">Date:</label>
+                            <input type="date" id="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Book Appointment</button>
+                    </form>
+                </div>
+                <div class="appointment-image">
+                    <img src="{{ url_for('static', filename='img/appointment.png') }}" alt="Appointment Image">
+                </div>
+            </div>
+        </div>
+    </div>       
+
+    <footer>
+        <p> HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Input Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1500px;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 150px;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-container input[type="number"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-container input[type="submit"] {
+            width: 10%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0073e6;
+            color: #fff;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+
+        .form-container .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .form-container a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h1>Diabetes Input Form</h1>
+        <form id="diabetes-form">
+            <label for="pregnancies">Pregnancies:</label>
+            <input type="number" id="pregnancies" name="pregnancies" required min="0" step="1">
+
+            <label for="glucose">Glucose:</label>
+            <input type="number" id="glucose" name="glucose" required min="0" step="any">
+
+            <label for="blood_pressure">Blood Pressure:</label>
+            <input type="number" id="blood_pressure" name="blood_pressure" required min="0" step="any">
+
+            <label for="insulin">Insulin:</label>
+            <input type="number" id="insulin" name="insulin" required min="0" step="any">
+
+            <label for="bmi">BMI:</label>
+            <input type="number" id="bmi" name="bmi" required min="0" step="any">
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="0" step="1">
+
+            <input type="submit" value="Submit">
+        </form>
+        <div class="result" id="result"></div>
+        <!-- <a href="/">Back to Home</a> -->
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('diabetes-form').addEventListener('submit', async function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Collect form data
+                const pregnancies = parseFloat(document.getElementById('pregnancies').value);
+                const glucose = parseFloat(document.getElementById('glucose').value);
+                const bloodPressure = parseFloat(document.getElementById('blood_pressure').value);
+                const insulin = parseFloat(document.getElementById('insulin').value);
+                const bmi = parseFloat(document.getElementById('bmi').value);
+                const age = parseFloat(document.getElementById('age').value);
+
+                // Check if any value is null or NaN
+                if (isNaN(pregnancies) || isNaN(glucose) || isNaN(bloodPressure) || isNaN(insulin) || isNaN(bmi) || isNaN(age)) {
+                    document.getElementById('result').innerText = 'Please provide valid inputs for all fields.';
+                    return;
+                }
+
+                const formData = {
+                    pregnancies: pregnancies,
+                    glucose: glucose,
+                    blood_pressure: bloodPressure,
+                    insulin: insulin,
+                    bmi: bmi,
+                    age: age
+                };
+
+                // Send POST request to Flask API
+                try {
+                    const response = await fetch('{{ url_for("predict_diabetes") }}', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)  // Send form data as JSON
+                    });
+                    
+                    const result = await response.json();
+                    document.getElementById('result').innerText = `Prediction: ${result.prediction}`;
+                } catch (error) {
+                    document.getElementById('result').innerText = `Error: ${error.message}`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

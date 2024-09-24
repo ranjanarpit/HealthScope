@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Focus on Whole Foods</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1500px;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+        .content img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .content h2 {
+            color: #1A76D1;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .content p {
+            color: #34495e;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>Focus on Whole Foods</h2>
+        <img src="{{ url_for('static', filename='img/whole_food.jpeg') }}" alt="Whole Foods Image 1">
+        <p>Whole Foods are as close to their natural state as possible, like fresh fruits, vegetables, whole grains (such as brown rice, oats, and quinoa), lean proteins (like chicken, fish, and legumes), and healthy fats (from sources like nuts, seeds, and olive oil).</p>
+        <p>Whole foods are packed with essential nutrients—vitamins, minerals, fiber, and antioxidants—that support overall health. These nutrients help maintain a healthy body weight, regulate blood sugar levels, lower cholesterol, and reduce inflammation, all of which are crucial in preventing chronic diseases.</p>
+        <p>Foods that are heavily processed often contain added sugars, unhealthy fats, and sodium, which can increase the risk of obesity, high blood pressure, and insulin resistance, contributing to the development of diabetes, heart disease, and cancer.</p>
+        <p>Beverages like soda, energy drinks, and some fruit juices are high in added sugars, which can lead to weight gain and increase the risk of diabetes and heart disease.</p>
+        <p>Consuming large amounts of red meat (like beef and pork) and processed meats (such as bacon, sausages, and deli meats) has been linked to an increased risk of heart disease and certain cancers, particularly colorectal cancer.</p>
+        <h2>Limit Unhealthy Fats</h2>
+        <img src="{{ url_for('static', filename='img/unhealthy_fats.jpeg') }}" alt="Whole Foods Image 2">
+        <p>Saturated fats are found in animal products like butter, cheese, red meat, and full-fat dairy, as well as in some tropical oils like coconut oil. High intake of saturated fats can raise LDL (bad) cholesterol levels, increasing the risk of heart disease.</p>
+        <p>Trans fats are often found in fried foods, baked goods, and processed snacks. Trans fats are particularly harmful because they raise LDL cholesterol and lower HDL (good) cholesterol, significantly increasing the risk of heart disease and contributing to weight gain and insulin resistance.</p>
+        <p>Instead of saturated and trans fats, focus on healthy fats found in foods like avocados, nuts, seeds, and oily fish (like salmon and mackerel), which can support heart health and help maintain a healthy weight.</p>
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+
+</html>

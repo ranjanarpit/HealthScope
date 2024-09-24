@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Advanced Machine Learning, Holistic Health, User-Centric Design, Data Privacy, Continuous Improvement, Proven Results, Accessibility">
+    <meta name="description" content="Learn about the advanced features of our Health Risk Prediction System, including machine learning algorithms, a holistic approach to health, user-centric design, commitment to privacy, and proven results.">
+    <title>Features - Health Risk Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 1500px;
+            margin: auto;
+            margin-top: 40px;
+        }
+
+        .form-container h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-container input[type="number"],
+        .form-container select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+
+        .form-container input[type="submit"] {
+            width: 10%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #0073e6;
+            color: #fff;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+
+        .form-container .result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        .form-container a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        .form-container a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h1>Heart Disease Prediction</h1>
+        <form id="heart-disease-form">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required min="0" step="1">
+
+            <label for="sex">Gender:</label>
+            <select id="sex" name="sex" required>
+                <option value="" disabled selected>Select Your Gender</option>
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+            </select>
+
+            <label for="cp">Chest Pain Type (cp):</label>
+            <select id="cp" name="cp" required>
+                <option value="" disabled selected>Select Chest Pain Type</option>
+                <option value="0">Typical Angina</option>
+                <option value="1">Atypical Angina</option>
+                <option value="2">Non-Anginal Pain</option>
+                <option value="3">Asymptomatic</option>
+            </select>
+
+            <label for="trestbps">Resting Blood Pressure (trestbps):</label>
+            <input type="number" id="trestbps" name="trestbps" required min="0" step="any">
+
+            <label for="chol">Cholesterol (chol):</label>
+            <input type="number" id="chol" name="chol" required min="0" step="any">
+
+            <input type="submit" value="Submit">
+        </form>
+        <div class="result" id="result"></div>
+        <!-- <a href="/">Back to Home</a> -->
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('heart-disease-form').addEventListener('submit', async function(event) {
+                event.preventDefault(); // Prevent the default form submission
+
+                // Collect form data
+                const age = parseFloat(document.getElementById('age').value);
+                const sex = parseFloat(document.getElementById('sex').value);
+                const cp = parseFloat(document.getElementById('cp').value);
+                const trestbps = parseFloat(document.getElementById('trestbps').value);
+                const chol = parseFloat(document.getElementById('chol').value);
+
+                // Check if any value is null or NaN
+                if (isNaN(age) || isNaN(sex) || isNaN(cp) || isNaN(trestbps) || isNaN(chol)) {
+                    document.getElementById('result').innerText = 'Please provide valid inputs for all fields.';
+                    return;
+                }
+
+                const formData = {
+                    age: age,
+                    sex: sex,
+                    cp: cp,
+                    trestbps: trestbps,
+                    chol: chol
+                };
+
+                // Send POST request to Flask API
+                try {
+                    const response = await fetch('/predict_heart', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(formData)  // Send form data as JSON
+                    });
+                    
+                    const result = await response.json();
+                    document.getElementById('result').innerText = `Prediction: ${result.prediction}`;
+                } catch (error) {
+                    document.getElementById('result').innerText = `Error: ${error.message}`;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Physical Activity Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1500px;
+            width: 100%;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+        .content img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        .content h2 {
+            color: #1A76D1;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        .content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .content li {
+            color: #34495e;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        
+        <h2>Regular Exercise</h2>
+        <img src="{{ url_for('static', filename='img/regular_exercise.jpeg') }}" alt="Stay Physically Active 1">
+        <p><strong>150 Minutes of Moderate-Intensity Aerobic Activity:</strong> This includes activities that get your heart rate up and make you breathe harder, like brisk walking, cycling, swimming, or dancing. These activities should be spread throughout the week, such as 30 minutes a day, five days a week.</p>
+        <p><strong>75 Minutes of Vigorous-Intensity Exercise:</strong> Vigorous activities like running, fast cycling, or high-intensity interval training (HIIT) significantly increase your heart rate and breathing. This type of exercise can be done in shorter periods, such as 25 minutes three times a week.</p>
+        <p><strong>Why It Matters:</strong> Regular aerobic exercise helps to improve cardiovascular health, increase insulin sensitivity (which helps in controlling blood sugar levels), and assist in weight management.</p>
+        
+
+        <h2>Strength Training</h2>
+        <img src="{{ url_for('static', filename='img/strength training.jpeg') }}" alt="Stay Physically Active 1">
+        <p><strong>Twice a Week:</strong> Incorporating muscle-strengthening exercises at least twice a week is essential. This can include activities like weight lifting, resistance band exercises, body-weight exercises (push-ups, squats), or yoga.</p>
+        <p><strong>Boosts Metabolism:</strong> Muscle-strengthening exercises help build lean muscle mass, which increases your metabolism, helping you burn more calories even at rest.</p>
+        <p><strong>Improves Insulin Sensitivity:</strong> Strength training improves the body's ability to manage blood sugar levels, reducing the risk of type 2 diabetes.</p>
+        
+
+        <h2>Stay Active Throughout the Day</h2>
+        <img src="{{ url_for('static', filename='img/active.jpeg') }}" alt="Stay Physically Active 1">
+        <p><strong>Avoid Long Periods of Sitting:</strong> Prolonged sitting is linked to an increased risk of chronic diseases, including heart disease and diabetes. Breaking up long periods of sitting with movement is crucial.</p>
+        <p><strong>Move Regularly:</strong> Take short breaks to stretch, walk around, or do light exercises. Incorporating activities like standing desks, short walks, or even stretching at your desk can make a big difference in maintaining your overall health.</p>
+        
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

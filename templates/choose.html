@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Advanced Machine Learning, Holistic Health, User-Centric Design, Data Privacy, Continuous Improvement, Proven Results, Accessibility">
+    <meta name="description" content="Learn about the advanced features of our Health Risk Prediction System, including machine learning algorithms, a holistic approach to health, user-centric design, commitment to privacy, and proven results.">
+    <title>Features - Health Risk Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .features-section {
+            width: 100%;
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fff;
+            margin-bottom: 80px;
+        }
+
+        .features-section h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1A76D1;
+            margin-bottom: 20px;
+        }
+
+        .features-content {
+            text-align: left;
+            padding: 0 20px;
+            color: #555;
+        }
+
+        .features-content h2 {
+            font-size: 1.5em;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .features-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* .features-content ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .features-content ul li {
+            margin-bottom: 20px; */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="features-section">
+        <h1>Why choose Us?</h1>
+        <div class="features-content">
+            <h2>Advanced Machine Learning Models</h2>
+            <p>Our application leverages the power of advanced machine learning algorithms to provide highly accurate health risk predictions. We use frameworks like TensorFlow and Keras, which are industry standards in AI, to build models that continuously learn and adapt, improving over time. This ensures that our predictions are not only accurate but also reflect the latest in medical research and technology.</p>
+
+            <h2>Holistic Approach to Health</h2>
+            <p>Unlike many health apps that focus on just one aspect of well-being, our system takes a comprehensive approach. We consider a wide range of health metrics and factors, from your family medical history to your daily lifestyle habits. This holistic approach ensures that you get a complete picture of your health, helping you make more informed decisions.</p>
+
+            <h2>User-Centric Design</h2>
+            <p>We prioritize the user experience, making sure that our platform is accessible to everyone, regardless of their tech skills. Our user interface is designed to be intuitive, with clear instructions, easy navigation, and a responsive design that works on all devices. Whether you’re using a smartphone, tablet, or computer, you’ll find the experience smooth and hassle-free.</p>
+
+            <h2>Commitment to Privacy and Security</h2>
+            <p>We understand the importance of protecting your personal health data. That’s why we’ve implemented stringent security measures, including data encryption, secure authentication, and compliance with global data protection standards like GDPR. Your data is your own, and we are committed to ensuring it remains private and secure.</p>
+
+            <h2>Continuous Improvement and Innovation</h2>
+            <p>In the rapidly evolving field of healthcare, staying ahead of the curve is essential. We are committed to continuously improving our platform by incorporating the latest advances in machine learning, data science, and healthcare research. Our team of experts is dedicated to refining our models, enhancing the user experience, and adding new features that keep our system at the forefront of digital health innovation.</p>
+
+            <h2>Proven Results and User Satisfaction</h2>
+            <p>We take pride in the results our users achieve. Our system has been rigorously tested and validated, with many users reporting improved health outcomes and greater peace of mind. By using our Health Risk Prediction System, you’re not just getting predictions—you’re gaining a reliable partner in your health journey.</p>
+
+            <h2>Accessible and Inclusive</h2>
+            <p>We believe that everyone deserves access to quality healthcare tools. Our platform is designed to be inclusive, with features that cater to a diverse range of users, including those with different levels of health literacy and technical expertise. We aim to break down barriers to preventive healthcare, making it accessible to all.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

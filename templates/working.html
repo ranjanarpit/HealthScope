@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Health Prediction, Secure Signup, Google Login, Health Metrics, Personalized Recommendations">
+    <meta name="description" content="Step-by-step guide on how to use the Health Risk Prediction System, including secure signup, health data input, personalized predictions, and ongoing health monitoring.">
+    <title>How It Works - Health Risk Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .how-it-works-section {
+            width: 100%;
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fff;
+            margin-bottom: 80px;
+        }
+
+        .how-it-works-section h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1A76D1;
+            margin-bottom: 20px;
+        }
+
+        .how-it-works-content {
+            text-align: left;
+            padding: 0 20px;
+            color: #555;
+        }
+
+        .how-it-works-content h2 {
+            font-size: 1.5em;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .how-it-works-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* .how-it-works-content ol {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .how-it-works-content ol li {
+            margin-bottom: 20px;
+        } */
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="how-it-works-section">
+        <h1>How It Works</h1>
+        <div class="how-it-works-content">
+            <h2>Sign in With Google</h2>
+            <p>The first step to using our Health Risk Prediction System is to create a secure account. This involves signing up with your email address. Once registered, you’ll have your own personalized dashboard where you can manage your health data and view predictions.</p>
+
+            <h2>Input Your Health Data</h2>
+            <p>After setting up your profile, you’ll be prompted to enter various health metrics. These can include vital statistics like your age, weight, height, and detailed medical history, such as your blood pressure, cholesterol levels, and any pre-existing conditions. The data input process is straightforward, with clear instructions and forms designed for ease of use.</p>
+
+            <h2>Get Your Health Risk Predictions</h2>
+            <p>Once your data is entered, our machine learning models get to work. Using the data you’ve provided, the system analyzes your health metrics to predict your risk of developing certain conditions, such as diabetes or heart disease. The predictions are displayed on your dashboard in an easy-to-understand format, with risk levels clearly indicated.</p>
+
+            <h2>Receive Personalized Recommendations</h2>
+            <p>Along with your risk predictions, the system provides you with personalized health recommendations. These suggestions are tailored to your specific risk factors and are designed to help you lower your chances of developing serious health issues. For example, if your data indicates a higher risk of heart disease, you may receive recommendations on diet changes, exercise routines, or the importance of regular check-ups.</p>
+
+            <h2>Monitor Your Health Over Time</h2>
+            <p>Health is not static, and our system allows you to track your health metrics over time. You can update your data as your health changes, and the system will provide updated risk assessments and recommendations accordingly. This feature is particularly useful for monitoring the effectiveness of lifestyle changes or medical treatments, helping you stay on top of your health goals.</p>
+
+            <h2>Secure Access and Data Management</h2>
+            <p>Access to your health information is protected through secure login credentials, and all data is encrypted during storage and transmission. You can rest assured that your privacy is safeguarded, with options to manage your data, including the ability to export your records or delete your account at any time.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

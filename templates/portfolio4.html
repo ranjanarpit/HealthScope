@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Monitor Health Regularly</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 1500px;
+            width: 100%;
+            margin: auto;
+            margin-top: 40px;
+            margin-bottom: 80px;
+        }
+
+        .content img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .content h2 {
+            color: #1A76D1;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .content p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="content">
+        <h2>Regular Check-Ups</h2>
+        <img src="{{ url_for('static', filename='img/regular_checkup.jpeg') }}" alt="Health Image 1">
+        <p><strong>Frequency:</strong> Schedule regular visits to your healthcare provider to monitor key health indicators like blood pressure, cholesterol, and blood sugar levels. Depending on your health status, this could be annually or more frequently.</p>
+        <p><strong>Importance:</strong> Regular check-ups help detect any potential problems early, making them easier to manage and treat before they become serious.</p>
+
+        <h2>Know Your Numbers</h2>
+        <img src="{{ url_for('static', filename='img/ky_number.jpeg') }}" alt="Health Image 2">
+        <p><strong>Key Indicators:</strong> Keep track of important health metrics, including:</p>
+        
+        <p><strong>Blood Glucose Levels:</strong> High blood sugar levels can indicate prediabetes or diabetes. Monitoring helps in managing your diet and lifestyle accordingly.</p>
+        <p><strong>Cholesterol Levels:</strong> High levels of LDL cholesterol (bad cholesterol) and low levels of HDL cholesterol (good cholesterol) increase the risk of heart disease.</p>
+        <p><strong>Blood Pressure:</strong> High blood pressure (hypertension) is a major risk factor for heart disease and stroke. Knowing your numbers can help you take steps to lower it if necessary.</p>
+        
+
+        <h2>Screening Tests</h2>
+        <img src="{{ url_for('static', filename='img/screening_tests.jpeg') }}" alt="Health Image 3">
+        <p><strong>HbA1c Test:</strong> This test measures your average blood glucose levels over the past 2-3 months. It helps in diagnosing diabetes and assessing how well diabetes is being managed if you have it.</p>
+        <p><strong>Lipid Panel:</strong> A lipid panel measures cholesterol levels in your blood, including total cholesterol, LDL (bad) cholesterol, HDL (good) cholesterol, and triglycerides. It helps assess your risk of heart disease and guides lifestyle or medication adjustments.</p>
+        
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Health Prediction, User Interface, Secure Data, Machine Learning, Health Metrics">
+    <meta name="description" content="Features of the Health Risk Prediction System, including user-friendly interface, personalized predictions, secure data management, and expert recommendations.">
+    <title>Health Risk Prediction System - Features</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .features-section {
+            width: 100%;
+            max-width: 1500px;
+            margin: 40px auto;
+            padding: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            background-color: #fff;
+            margin-bottom: 80px;
+        }
+
+        .features-section h1 {
+            text-align: center;
+            font-size: 2.5em;
+            color: #1A76D1;
+            margin-bottom: 20px;
+        }
+
+        .features-content {
+            text-align: left;
+            padding: 0 20px;
+            color: #555;
+        }
+
+        .features-content h2 {
+            font-size: 1.5em;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .features-content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        /* .features-content ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .features-content ul li {
+            margin-bottom: 20px;
+            padding-left: 20px;
+            position: relative;
+        } */
+
+        .features-content ul li::before {
+            /* content: "✔️"; */
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #1A76D1;
+            font-size: 1.2em;
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-topbar">
+            <div class="social-media">
+                <a href="https://www.linkedin.com/in/arpit-ranjan-86100822b/" target="_blank" aria-label="LinkedIn Profile">LinkedIn</a>
+                <a href="https://github.com/ranjanarpit" target="_blank" aria-label="GitHub Profile">GitHub</a>
+                <a href="https://twitter.com/your-username" target="_blank" aria-label="Twitter Profile">Twitter</a>
+            </div>
+            <div class="contact-info">
+                <span><i class="fa fa-phone"></i> +91 62029 33848</span>
+                <span><i class="fa fa-envelope"></i> <a href="mailto:arpitranjan204@gmail.com">arpitranjan204@gmail.com</a></span>
+            </div>
+        </div>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="{{ url_for('index') }}" class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Disease Predictor Logo"></a>
+            </div>
+            <nav>
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Home</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('overview') }}">Overview</a>
+                            <a href="{{ url_for('mission') }}">Mission</a>
+                            <a href="{{ url_for('vision') }}">Vision</a>
+                            <a href="{{ url_for('features') }}">Features You’ll Love</a>
+                            <a href="{{ url_for('working') }}">How It Works</a>
+                            <a href="{{ url_for('choose') }}">Why Choose Us?</a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#doctors" class="dropbtn">Doctors</a>
+                        <div class="dropdown-content">
+                            <a href="{{ url_for('doctors1') }}">Dr. K.K. Khandelwal</a>
+                            <a href="{{ url_for('doctors2') }}">Dr. S.K. Sinha</a>
+                            <a href="{{ url_for('doctors3') }}">Dr. R.P. Singh</a>
+                        </div>
+                    </li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="col-lg-2 col-12">
+                <div class="get-quote">
+                    <a id="book-appointment-btn" class="btn" href="#appointment">Book Appointment</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="features-section">
+        <h1>Key Features</h1>
+        <div class="features-content">
+            <h2>User-Friendly Interface</h2>
+            <p>Our application is designed with the user in mind, featuring a clean, intuitive interface that makes it easy for anyone to navigate. Whether you’re tech-savvy or new to digital health tools, you’ll find it simple to input your health data and access your predictions. The responsive design ensures a seamless experience across all devices, from desktops to mobile phones.</p>
+            <h2>Personalized Health Predictions</h2>
+            <p>Our advanced machine learning algorithms analyze your unique health data to provide personalized predictions for various health risks. This includes conditions like diabetes, heart disease, and hypertension. The predictions are not just generic; they are tailored specifically to your personal health metrics and medical history, ensuring relevance and accuracy.</p>
+            <h2>Secure Data Input and Management</h2>
+            <p>Your health data is sensitive, and we treat it with the utmost care. We’ve implemented robust security protocols to ensure that your data is encrypted and stored securely. Our data management system adheres to the highest standards of privacy, complying with international data protection regulations. Rest assured, your information is safe with us.</p>
+            <h2>Expert Health Recommendations</h2>
+            <p>Along with risk predictions, you receive actionable health recommendations from our system. These are based on your specific health risks and are designed to help you take proactive steps toward improving your health. The recommendations may include lifestyle changes, dietary adjustments, or suggestions for further medical consultation, all aimed at reducing your risk factors.</p>
+            <h2>Continuous Learning and Improvement</h2>
+            <p>Our platform is built on machine learning models that continuously improve as they are exposed to more data. This means that the more users interact with the system, the more accurate and effective it becomes. We regularly update our algorithms to incorporate the latest research and medical advancements, ensuring that you always receive the best possible predictions and advice.</p>
+            <h2>Comprehensive Health Metrics</h2>
+            <p>The system allows you to input a wide range of health metrics, including but not limited to age, weight, blood pressure, cholesterol levels, blood sugar levels, and family medical history. This comprehensive data collection ensures that the predictions are holistic and account for multiple factors that influence your health.</p>
+            <h2>Seamless Integration of Front-End and Back-End</h2>
+            <p>Our application is built with modern web technologies like React, Node.js, and Express.js, ensuring that the front-end and back-end work together seamlessly. This integration provides you with a smooth, lag-free experience as you navigate the app, input data, and receive predictions.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; HealthScope can make mistakes. Help us make it more efficient by giving us your feedback.</p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+</body>
+</html>
