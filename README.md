@@ -18,13 +18,7 @@ Technology Used: HTML, CSS, JavaScript, React<br>
 Description: Developed a responsive and user-centric interface using React, HTML, CSS, and JavaScript. The front-end allows users to input their health data and view prediction results seamlessly. The intuitive design ensures a smooth and engaging user experience, making the application accessible to users with varying levels of technical expertise.<br>
 3. Back-End Development<br>
 Technology Used: Python, Flask<br>
-Description: Engineered a robust back-end system using Flask to manage user inputs, process data, and generate predictions efficiently. The back-end is optimized for real-time processing, resulting in a 75% improvement in data handling efficiency, ensuring quick response times for users.<br>
-4. Data Visualization<br>
-Technology Used: JavaScript (D3.js, Chart.js)<br>
-Description: Integrated comprehensive data visualization features using D3.js and Chart.js. These visualizations display prediction results and historical data trends, helping users understand their health risks better. The visual aids increase user interaction time by 80% and improve engagement.<br>
-5. Deployment and Maintenance<br>
-Technology Used: Docker, Kubernetes<br>
-Description: Led the deployment process, utilizing Docker for containerization and Kubernetes for orchestration. This setup ensures that the application is scalable, reliable, and easy to maintain. The deployment strategy enhances the overall performance and uptime of the application, providing a stable user experience.<br><br>
+Description: Engineered a robust back-end system using Flask to manage user inputs, process data, and generate predictions efficiently. The back-end is optimized for real-time processing, resulting in a 75% improvement in data handling efficiency, ensuring quick response times for users.<br><br>
 
 Usage<br>
 1. Accessing the Application: <br>
