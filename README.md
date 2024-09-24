@@ -1,4 +1,4 @@
-# HealthScope - machine learning based multiple Disease risk Prediction App
+# HealthScope - Machine Learning based multiple Disease risk Prediction App
 A Diabetes and Heart Disease Risk Prediction End-To-End Web Application
 Introduction<br>
 Health Scope is an advanced web application designed to assess and predict the risk of multiple diseases, including diabetes and heart disease. Leveraging cutting-edge machine learning models, this application provides users with personalized health risk assessments based on their input data. Developed with a seamless integration of Python, Flask, React, HTML, CSS, and JavaScript, Health Scope offers a user-friendly interface that ensures quick and accurate predictions, making it a valuable tool for individuals looking to monitor their health proactively.<br><br>
